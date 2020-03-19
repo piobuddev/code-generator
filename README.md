@@ -53,6 +53,12 @@ Additionaly you can fix code formatting with:
 $ vendor/bin/phpcbf --standard=PSR2 --extensions=php --colors --severity=1 src
 ```
 
+### PHPUNIT
+
+```sh
+$ vendor/bin/phpunit
+```
+
 ## Built With
 * [The Console Component](https://symfony.com/doc/current/components/console.html) The Console component allows you to create command-line commands.
 * [Twig](https://twig.symfony.com/) - A modern template engine for PHP.
