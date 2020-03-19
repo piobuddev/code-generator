@@ -1,0 +1,16 @@
+[
+  {
+    "fooClassName": "foo",
+    "fooClassProperty": "baz",
+    "barFunctionName": "qux",
+    "barProperty": "quux",
+    "dirName": "waldo"
+  },
+  {
+    "fooClassName": "quuz",
+    "fooClassProperty": "corge",
+    "barFunctionName": "grault",
+    "barProperty": "garply",
+    "dirName": "fred"
+  }
+]

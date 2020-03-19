@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Bar;
+
+class {{ fooClassName | capitalize }}
+{
+    public string ${{ fooClassProperty }};
+
+    public function __construct()
+    {
+        $this->{{ fooClassProperty }} = 'foo';
+    }
+}
