@@ -1,0 +1,28 @@
+services:
+  _defaults:
+    autowire: true
+
+  Twig\Loader\FilesystemLoader: ~
+  Symfony\Component\Finder\Finder: ~
+  Symfony\Component\Filesystem\Filesystem: ~
+
+  CodeGenerator\File\SymfonyFilesystemAdapter: ~
+  CodeGenerator\File\FilesystemInterface: '@CodeGenerator\File\SymfonyFilesystemAdapter'
+
+  CodeGenerator\Template\Loader: ~
+  CodeGenerator\Template\Twig\RendererFactory: ~
+  CodeGenerator\Template\RendererFactoryInterface: '@CodeGenerator\Template\Twig\RendererFactory'
+
+  CodeGenerator\File\Writer\WriterFactory: ~
+  CodeGenerator\File\Writer\Parser\TagParser: ~
+  CodeGenerator\File\Writer\TagWriter:
+    public: true
+
+  CodeGenerator\File\Writer\FileWriter:
+    public: true
+
+  CodeGenerator\File\Writer\Writer: ~
+  CodeGenerator\File\Writer\WriterInterface: '@CodeGenerator\File\Writer\Writer'
+
+  CodeGenerator\Command\GenerateCommand:
+    public: true
