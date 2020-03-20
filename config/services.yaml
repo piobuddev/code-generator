@@ -2,6 +2,14 @@ services:
   _defaults:
     autowire: true
 
+  Symfony\Component\Console\Application:
+    public: true
+  CodeGenerator\Service\ContainerCommandLoaderFactory: ~
+
+  Symfony\Component\Console\CommandLoader\ContainerCommandLoader:
+    factory: ['@CodeGenerator\Service\ContainerCommandLoaderFactory', 'create']
+    public: true
+
   Twig\Loader\FilesystemLoader: ~
   Symfony\Component\Finder\Finder: ~
   Symfony\Component\Filesystem\Filesystem: ~

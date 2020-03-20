@@ -46,7 +46,7 @@ $ vendor/bin/phpstan analyse -l 7 src tests -c phpstan.neon
 $ vendor/bin/phpcs --standard=PSR2 --extensions=php --colors --severity=1 src
 ```
 
-Additionaly you can fix code formatting with:
+Additionally, you can fix code formatting with:
 ##### PHPCBF : PHP Code Beautifier and Fixer
 
 ```sh
@@ -56,7 +56,7 @@ $ vendor/bin/phpcbf --standard=PSR2 --extensions=php --colors --severity=1 src
 ### PHPUNIT
 
 ```sh
-$ vendor/bin/phpunit
+$ vendor/bin/phpunit --testdox
 ```
 
 ## Built With

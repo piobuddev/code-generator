@@ -4,9 +4,16 @@
 require __DIR__.'/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-$application = new Application();
+$container = new ContainerBuilder();
+$loader = new YamlFileLoader($container, new FileLocator(__DIR__));
+$loader->load('config/services.yaml');
+$container->compile();
 
-require __DIR__ . '/bootstrap.php';
-
+$application = $container->get(Application::class);
+$application->setCommandLoader($container->get(ContainerCommandLoader::class));
 $application->run();
